@@ -1,0 +1,61 @@
+//静态顺序表
+#include<stdio.h>
+#include<stdlib.h>
+#include<assert.h>
+#include<string.h>
+
+
+#define DataType int 
+#define MAX 50
+
+typedef struct SeqList
+{
+	DataType arr[MAX];
+	int sz;
+}Seq, *pSeqList;
+
+
+//初始化 
+void InitSeqList(pSeqList pSeq);
+//尾部插入 
+void PushBack(pSeqList pSeq, DataType data);
+//尾部删除 
+void PopBack(pSeqList pSeq);
+//头部插入 
+void PushFront(pSeqList pSeq, DataType data);
+//头部删除 
+void PopFront(pSeqList pSeq);
+//查找指定元素 
+int Find(pSeqList pSeq, DataType data);
+//指定位置插入 
+void Insert(pSeqList pSeq, int pos, DataType data);
+//删除指定位置元素 
+void Erase(pSeqList pSeq, int pos);
+//删除指定元素 
+void Remove(pSeqList pSeq, DataType data);
+//删除所有的指定元素 
+void Remove_All(pSeqList pSeq, DataType data);
+//返回顺序表的大小 
+int Size(pSeqList pSeq);
+//判断顺序表是否为空 
+int Empty(pSeqList pSeq);
+//冒泡排序 
+void BubbleSort(pSeqList pSeq);
+//选择排序 
+void SelectSort(pSeqList pSeq);
+//选择排序的优化 
+void SelectSortOP(pSeqList pSeq);
+//二分查找 
+int BinarySearch(pSeqList pSeq, DataType data);
+//二分查找递归写法 
+//int BinarySearch_R(pSeqList pSeq, int left, int right, DataType d);
+
+//打印 
+void Show(pSeqList pSeq);
+//反转
+void Reverse(pSeqList Seq);
+void test_push_pop();//头尾插入删除测试
+void test_Find_Insert_Erase();//指定位置插入删除测试
+void Test_Remove_RemoveAll();//删除指定元素及删除全部指定元素测试
+void test_BubbleSort();//冒泡排序测试
+void test_SelectSort();//选择排序及其优化测试
